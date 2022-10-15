@@ -12,6 +12,11 @@ export default function Login({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  function seConnecter(paramNavigation) {
+    //connect and authenticate into firebase
+    navigation.navigate(paramNavigation);
+  }
+
   return (
     <>
       <View style={styles.logoContainer}>
@@ -34,7 +39,7 @@ export default function Login({ navigation }) {
         />
         <TouchableOpacity
           style={styles.button}
-          onPress={() => navigation.navigate("Liste Contact")}
+          onPress={() => seConnecter("Liste Contact")}
         >
           <Text style={styles.login}>Login</Text>
         </TouchableOpacity>
@@ -80,7 +85,7 @@ const styles = StyleSheet.create({
     height: 50,
     borderWidth: 1,
     borderRadius: 19,
-    marginTop: 10,
+    marginTop: 20,
     borderColor: "blue",
     backgroundColor: "blue",
     justifyContent: "center",
