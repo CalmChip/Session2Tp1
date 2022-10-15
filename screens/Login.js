@@ -38,6 +38,12 @@ export default function Login({ navigation }) {
         >
           <Text style={styles.login}>Login</Text>
         </TouchableOpacity>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Accueil")}
+        >
+          <Text style={styles.login}>Accueil</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
